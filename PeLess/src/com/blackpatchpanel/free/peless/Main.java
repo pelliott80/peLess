@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 
 
@@ -16,6 +17,9 @@ public class Main extends Application {
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("/css/peless.css").toExternalForm());
 			primaryStage.setScene(scene);
+			// add icon for peless
+			primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/icon/peless.png")));
+			
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
