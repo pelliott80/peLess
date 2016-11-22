@@ -1,5 +1,6 @@
 package com.blackpatchpanel.free.peless.controller;
 
+import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -24,11 +25,37 @@ public class Base {
 	}
 
     /*
-     * This is comming from the top of base.fxml
+     * This is coming from the top of base.fxml
+     * this is the object created in main
      */
 	@FXML
     private VBox container;
+
+	/*
+     * This is coming from the bottom of base.fxml
+     * this tab pane will have tabs added to it dynamically
+     */
+	@FXML	
+	private TabPane tabPane;
 	
+	/*
+	 * End user wants us to open a new file
+	 * we must open it create a new tab for it
+	 * and read the text into the text area
+	 */
+	@FXML
+	void openNewFile(ActionEvent event) {
+
+	}
+
+	/*
+	 * destroy the tab and return its resources.
+	 * if after no tabs left then exit.
+	 */
+	@FXML
+	void closeFile(ActionEvent event) {
+
+	}
 	/*
 	 * called from base.fxml to exit the program.
 	 */
