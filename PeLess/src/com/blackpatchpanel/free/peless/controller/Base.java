@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 import java.io.File;
 import java.util.List;
 
+import com.blackpatchpanel.free.peless.model.Model;
+
 /**
  * 
  * @author Paul Elliott <pelliott@blackpatchpanel.com>
@@ -23,11 +25,17 @@ import java.util.List;
  * they should be considered together
  */
 public class Base {
+	
+	private Model model;
+	
 	/*
 	 * Automatically generated constructor for base
 	 */
     public Base() {
 		super();
+		
+		// the model for dealing with files.
+		model = new Model();
 	}
 
     /*
