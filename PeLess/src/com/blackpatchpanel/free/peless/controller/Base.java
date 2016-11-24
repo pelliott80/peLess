@@ -1,10 +1,16 @@
 package com.blackpatchpanel.free.peless.controller;
 
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
+import java.io.File;
+import java.util.List;
 
 /**
  * 
@@ -46,6 +52,17 @@ public class Base {
 	@FXML
 	void openNewFile(ActionEvent event) {
 
+		// create the file chooser
+		FileChooser fileChooser = new FileChooser();
+		// tell user why he is choosing a file
+		fileChooser.setTitle("Open File for display");
+		
+		// run the dialog to get the files
+		List<File> fileList = fileChooser.showOpenMultipleDialog( container.getScene().getWindow());
+		
+		for (File file : fileList) {
+			System.out.println(file.toString());
+		}
 	}
 
 	/*
