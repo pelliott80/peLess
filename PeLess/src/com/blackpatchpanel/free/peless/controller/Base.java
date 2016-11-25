@@ -89,6 +89,20 @@ public class Base {
 					
 				}
 				
+				// save reference to this Base in the tab's controller
+				// so the tab controller can find the controller for its Base
+				mytabController.baseOfTab = this;
+				
+				// save the model into the tab controller
+				// the TabController needs access to the model
+				mytabController.model = this.model;
+				
+				tabPane.getTabs().add(controlersTab);
+//				controlersTab.setContent( (Node) FXMLLoader.load(getClass().getResource("fxml/tab.fxml")) );
+				
+				mytabController.loadText(file);
+				
+				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

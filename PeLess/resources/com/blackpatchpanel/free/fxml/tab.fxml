@@ -8,7 +8,9 @@
 Created by Scene Builder and extensively edited by Paul Elliott 
  -->
 
-<Tab fx:id="tabController" text="Untitled Tab" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackpatchpanel.free.peless.controller.TabController">
+<Tab fx:id="tabController" text="Untitled Tab" xmlns="http://javafx.com/javafx/8.0.65" 
+xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="com.blackpatchpanel.free.peless.controller.TabController">
    <content>
       <ScrollPane prefHeight="200.0" prefWidth="600.0">
          <content>
