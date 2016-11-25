@@ -6,8 +6,8 @@ import javafx.scene.control.TextArea;
 
 public class TabController {
 	
-	@FXML
-	private Tab tabControler = new Tab();
+	@FXML 
+	Tab tabController = new Tab();
 	
 	@FXML
 	private TextArea textArea = new TextArea();

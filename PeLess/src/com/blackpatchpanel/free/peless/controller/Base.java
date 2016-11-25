@@ -2,14 +2,17 @@ package com.blackpatchpanel.free.peless.controller;
 
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import com.blackpatchpanel.free.peless.model.Model;
@@ -68,8 +71,31 @@ public class Base {
 		// run the dialog to get the files
 		List<File> fileList = fileChooser.showOpenMultipleDialog( container.getScene().getWindow());
 		
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/tab.fxml"));
+		
 		for (File file : fileList) {
 			System.out.println(file.toString());
+			
+			try {
+				Tab tabRoot = (Tab)fxmlLoader.load();
+
+//				Tab tabRoot = FXMLLoader.load(getClass().getResource("/fxml/tab.fxml"));
+				TabController mytabController = fxmlLoader.<TabController>getController();
+				
+				Tab controlersTab = mytabController.tabController;
+				
+				if (tabRoot != controlersTab) {
+					System.out.println("not equal tabs");
+					
+				}
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			
+			
 		}
 	}
 
