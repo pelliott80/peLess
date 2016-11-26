@@ -72,12 +72,13 @@ public class Base {
 		// run the dialog to get the files
 		List<File> fileList = fileChooser.showOpenMultipleDialog( container.getScene().getWindow());
 		
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/tab.fxml"));
-		
+				
 		for (File file : fileList) {
 			System.out.println(file.toString());
 			
 			try {
+				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/tab.fxml"));
+				
 				Tab tabRoot = (Tab)fxmlLoader.load();
 
 //				Tab tabRoot = FXMLLoader.load(getClass().getResource("/fxml/tab.fxml"));
