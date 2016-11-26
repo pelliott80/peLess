@@ -14,7 +14,9 @@ fx:controller="com.blackpatchpanel.free.peless.controller.TabController">
    <content>
       <ScrollPane>
          <content>
-            <TextArea fx:id="textArea" editable="false" />
+            <TextArea fx:id="textArea" editable="false" 
+            prefHeight="1600" prefWidth="2400"
+            />
          </content>
       </ScrollPane>
    </content>
