@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
@@ -119,7 +120,12 @@ public class Base {
 	 */
 	@FXML
 	void closeFile(ActionEvent event) {
-
+		Tab tab = tabPane.getSelectionModel().getSelectedItem();
+		if (tab != null) {
+			tab.getTabPane().getTabs().remove(tab);
+//			Event.fireEvent(tab, new Event(Tab.CLOSED_EVENT));  // does not work
+		}
+//		tabPane.getTabs().remove();
 	}
 	/*
 	 * called from base.fxml to exit the program.
