@@ -20,10 +20,7 @@
 	they should be considered together.
  -->
 
-<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" 
-minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="900.0" 
-stylesheets="@/css/peless.css" xmlns="http://javafx.com/javafx/8.0.65" 
-xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackpatchpanel.free.peless.controller.Base">
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="900.0" stylesheets="@/css/peless.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackpatchpanel.free.peless.controller.Base">
   
    <children>
    	  <!--
@@ -72,6 +69,6 @@ xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackpatchpanel.free.pele
       <!--
       Tabs added to this tab pane will be created dynamically 
        -->
-      <TabPane fx:id="tabPane" prefHeight="1600" prefWidth="2400" tabClosingPolicy="UNAVAILABLE" />
+      <TabPane fx:id="tabPane" prefHeight="1600" prefWidth="2400" tabClosingPolicy="ALL_TABS" />
    </children>
 </VBox>
