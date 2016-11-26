@@ -26,7 +26,7 @@ public class Main extends Application {
 			// this is where the fxml gets in to influence the scene we are creating
 			Parent root = FXMLLoader.load(getClass().getResource("/fxml/base.fxml"));
 			// create the scene from the root
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root);
 			// by changing this stylesheet we can change the visual look and feel
 			// of our app!
 			scene.getStylesheets().add(getClass().getResource("/css/peless.css").toExternalForm());
