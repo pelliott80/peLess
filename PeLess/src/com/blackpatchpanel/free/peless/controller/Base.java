@@ -102,6 +102,9 @@ public class Base {
 				tabPane.getTabs().add(controlersTab);
 //				controlersTab.setContent( (Node) FXMLLoader.load(getClass().getResource("fxml/tab.fxml")) );
 				
+				// set the text visible on the tab.
+				controlersTab.setText(model.fileToFileNameString(file));
+				
 				mytabController.loadText(file);
 				
 				

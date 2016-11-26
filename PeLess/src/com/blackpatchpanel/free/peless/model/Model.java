@@ -17,5 +17,10 @@ public class Model {
 		// use path to return a list of lines. from the file.
 		return Files.readAllLines(file.toPath());
 	}
+	
+	public String fileToFileNameString(File file)
+	{
+		return file.toPath().getFileName().toString();
+	}
 
 }
